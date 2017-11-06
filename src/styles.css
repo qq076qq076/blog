@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+html body{
+  font-size: 20px;
+  background-color: #eee;
+}
+
+section{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

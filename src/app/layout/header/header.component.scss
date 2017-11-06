@@ -1,0 +1,26 @@
+nav {
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 10px;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      position: relative;
+      border: 1px solid white;
+      margin: 0.5rem 0;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+header {
+  background-color: var(--light);
+}

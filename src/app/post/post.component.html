@@ -1,0 +1,13 @@
+<section class="container">
+  <div class="row">
+    <div class="col-12" *ngFor="let item of article">
+      <div class="card text-truncate">
+        <div class="card-body">
+          <h4 class="card-title" [innerText]="item['title']"></h4>
+          <div class="card-text" [innerHTML]="item['content']"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

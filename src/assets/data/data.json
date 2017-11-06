@@ -1,0 +1,79 @@
+{
+  "article": [{
+      "id": "1",
+      "title": "首篇發文",
+      "content": "這是為了要擷取網站的css跟html排版<br><br>所以寫的測試文章<br><br>為了放在我自己架的測試網站<br><br>test test~",
+      "date": "2017-03-18",
+      "tag": "1"
+    },
+    {
+      "id": "2",
+      "title": "複製發文",
+      "content": "測試看看多文章排版<br><br>所以寫的測試文章<br><br>為了放在我自己架的測試網站<br><br>test test~",
+      "date": "2017-03-18",
+      "tag": "2"
+    },
+    {
+      "id": "3",
+      "title": "複製發文",
+      "content": "測試看看多文章排版<br><br>所以寫的測試文章<br><br>為了放在我自己架的測試網站<br><br>test test~",
+      "date": "2017-03-18",
+      "tag": "2"
+    },
+    {
+      "id": "4",
+      "title": "複製發文",
+      "content": "測試看看多文章排版<br><br>所以寫的測試文章<br><br>為了放在我自己架的測試網站<br><br>test test~",
+      "date": "2017-03-18",
+      "tag": "2"
+    }
+  ],
+  "tag": [{
+      "id": 1,
+      "類型": "生活"
+    },
+    {
+      "id": 2,
+      "類型": "測試"
+    },
+    {
+      "id": 3,
+      "類型": "前端"
+    },
+    {
+      "id": 4,
+      "類型": "後端"
+    },
+    {
+      "id": 5,
+      "類型": "其他"
+    }
+  ],
+  "author":[
+    {
+      "title": "使用過的框架",
+      "list": ["codeigniter (php)", "Angualr (javascript)"],
+      "col": "col-md-4 col-12"
+    },
+    {
+      "title": "版本控制",
+      "list": ["Subversion", "Git"],
+      "col": "col-md-4 col-12"
+    },
+    {
+      "title": "開發使用系統",
+      "list": ["CentOS"],
+      "col": "col-md-4 col-12"
+    },
+    {
+      "title": "維護過的專案",
+      "list": ["采定國際(Andenhud) 官方網站,購物車", "悠活假期(Yoho Tour) 官方網站", "萬集會計師事務所 官方網站", "匡楊資訊 官方網站"],
+      "col": "col-md-6 col-12"
+    },
+    {
+      "title": "最近想做的事",
+      "list": ["想要用Angular寫一個完整的專案(你眼前的這個)", "上完UI設計課程，可以有一個漂亮的成品", "能把歌曲'你曾經讓我心動'練好"],
+      "col": "col-md-6 col-12"
+    }
+  ]
+}
