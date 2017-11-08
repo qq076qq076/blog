@@ -10,8 +10,11 @@ export class PostComponent implements OnInit {
   article: Array<any>;
 
   constructor(private datasvc: DataService) {
-    datasvc.Getdata('assets/data/data.json', '0')
-      .then(res => { this.article = res['article']; console.log(res); });
+    // datasvc.Getdata('assets/data/data.json', '0')
+    //   .then(res => { this.article = res['article']; console.log(res); });
+    const search_data = { 'table': 'post' };
+    datasvc.GetApidata(search_data)
+      .then(res => { this.article = res; });
   }
 
   ngOnInit() {
