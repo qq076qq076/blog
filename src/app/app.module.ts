@@ -14,6 +14,7 @@ import { PostComponent } from './post/post.component';
 import { DataService } from './service/data.service';
 import { AuthorComponent } from './author/author.component';
 import { PContentComponent } from './post/p-content/p-content.component';
+import { TagComponent } from './tag/tag.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PContentComponent } from './post/p-content/p-content.component';
     LayoutComponent,
     PostComponent,
     AuthorComponent,
-    PContentComponent
+    PContentComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,

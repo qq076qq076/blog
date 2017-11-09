@@ -10,7 +10,7 @@
               <a [routerLink]="'/layout/post/'+item['id']">繼續閱讀</a>
             </div>
             <div class="col datetime">
-              <time title="Source Title" [innerText]="item['createDate']"></time>
+              <time title="Source Title" [innerText]="item['createDate']|date: 'yyyy/MM/dd'"></time>
             </div>
           </div>
         </div>

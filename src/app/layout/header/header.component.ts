@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.nav_list = [
       { name: '文章', link: '/layout/post' },
-      { name: '分類', link: '' },
+      { name: '分類', link: '/layout/tag' },
       { name: '關於我', link: '/layout/author' }
     ];
   }
