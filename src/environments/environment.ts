@@ -7,3 +7,6 @@ export const environment = {
   production: false,
   api: 'https://script.google.com/macros/s/AKfycbzO01gQbwPjkq7DLVRluNrZwGVN6nYo6InqCQXYPAw4R4TuQ_Y/exec'
 };
+
+// https://script.google.com/macros/s/AKfycbzO01gQbwPjkq7DLVRluNrZwGVN6nYo6InqCQXYPAw4R4TuQ_Y/exec
+// https://script.google.com/macros/u/1/s/AKfycbzO01gQbwPjkq7DLVRluNrZwGVN6nYo6InqCQXYPAw4R4TuQ_Y/exec?table=post

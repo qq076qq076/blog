@@ -38,6 +38,7 @@ export class DataService {
 
   private addTitle(res) {
     let data = [];
+    console.log(res);
     res['data'].forEach((val, ind) => {
       let item = new Object();
       val.forEach((itemVal, itemInd) => {

@@ -5,8 +5,15 @@
         <div class="card-body">
           <h4 class="card-title" [innerText]="item['title']"></h4>
           <div class="card-text" [innerHTML]="item['content']"></div>
+          <div class="row tool">
+            <div class="col">
+              <a [routerLink]="'/layout/post/'+item['id']">繼續閱讀</a>
+            </div>
+            <div class="col datetime">
+              <time title="Source Title" [innerText]="item['createDate']"></time>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
