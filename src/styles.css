@@ -1,10 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-html body{
+html body {
   font-size: 20px;
   background-color: #eee;
 }
 
-section{
+section {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+header {
+  background-color: #f8f9fa;
+}
+
+footer {
+  background-color: #f8f9fa;
 }

@@ -1,5 +1,17 @@
-.card{
-  height: 13rem;
-  overflow-y: hidden;
+.card {
+  // height: 13rem;
+  // overflow-y: hidden;
   margin: 0.3rem 0;
+}
+
+.card-text {
+  height: 7rem;
+  overflow-y: hidden;
+}
+.tool {
+  font-size: 0.8rem;
+  .datetime {
+    text-align: right;
+    font-style: italic;
+  }
 }
