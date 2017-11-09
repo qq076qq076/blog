@@ -12,11 +12,11 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  Getdata(table: string, id: string) {
-    return this.http.get(table)
-      .toPromise()
-      .catch(this.handleError);
-  }
+  // Getdata(table: string, id: string) {
+  //   return this.http.get(table)
+  //     .toPromise()
+  //     .catch(this.handleError);
+  // }
 
   GetApidata(searchData) {
     let searchString = '?';
