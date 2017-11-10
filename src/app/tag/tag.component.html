@@ -5,7 +5,7 @@
         <div class="card-body">
           <ul>
             <li *ngFor="let item of tag_data">
-              <a [routerLink]="'/layout/tag'+item['id']" [innerText]="item['type']"></a>
+              <a [routerLink]="'/layout/tag/'+item['id']" [innerText]="item['type']"></a>
             </li>
           </ul>
         </div>

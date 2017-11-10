@@ -1,7 +1,7 @@
 <header>
   <div class="container">
     <h2>自我紀錄式</h2>
-    <nav>
+    <nav [ngClass]="{'fixed':need_fixed}">
       <ul class="row">
         <li *ngFor="let item of nav_list" class="col text-center">
           <a [routerLink]="item.link">{{item.name}}</a>

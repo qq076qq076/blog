@@ -3,7 +3,7 @@
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title" [innerText]="post_data['title']">載入中.....</h4>
+          <h4 class="card-title" [innerText]="post_data['title']||'載入中.....'"></h4>
           <div class="card-text" [innerHTML]="post_data['content']">
           </div>
           <div class="tool">
