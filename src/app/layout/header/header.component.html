@@ -1,13 +1,13 @@
 <header>
   <div class="container">
     <h2>自我紀錄式</h2>
-    <nav [ngClass]="{'fixed':need_fixed}">
-      <ul class="row">
-        <li *ngFor="let item of nav_list" class="col text-center"[routerLink]="item.link">
-          <!-- <a [routerLink]="item.link">{{item.name}}</a> -->
-          {{item.name}}
-        </li>
-      </ul>
-    </nav>
   </div>
+  <nav [ngClass]="{'fixed':need_fixed}">
+    <ul class="row">
+      <li *ngFor="let item of nav_list" class="col text-center" [routerLink]="item.link">
+        <!-- <a [routerLink]="item.link">{{item.name}}</a> -->
+        {{item.name}}
+      </li>
+    </ul>
+  </nav>
 </header>

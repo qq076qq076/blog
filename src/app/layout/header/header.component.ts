@@ -12,8 +12,8 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log(number);
-    this.need_fixed = (number > 46);
+    // console.log(number);
+    this.need_fixed = (number > 60);
   }
   constructor() {}
 
