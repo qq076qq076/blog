@@ -1,22 +1,27 @@
 nav {
   background-color: black;
   opacity: 0.5;
-  border-radius: 10px;
   ul {
     margin: 0;
     padding: 0;
     li {
       display: inline;
       position: relative;
-      border: 1px solid white;
-      margin: 0.5rem 0;
-      a {
-        color: white;
-      }
+      border-style: solid;
+      border-top: 0;
+      border-bottom: 0;
+      border-color: white;
+      color: white;
+      cursor: pointer;
     }
   }
 }
 
 h2 {
   text-align: center;
+}
+
+.fixed{
+  position: fixed;
+  z-index: 5;
 }
