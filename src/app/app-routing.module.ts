@@ -7,6 +7,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { PostComponent } from './post/post.component';
 import { PContentComponent } from './post/p-content/p-content.component';
 import { TagComponent } from './tag/tag.component';
+import { TaglistComponent } from './tag/taglist/taglist.component';
 
 const PostRoutes: Routes = [
   { path: '', component: PostComponent, pathMatch: 'full' },
@@ -16,7 +17,7 @@ const PostRoutes: Routes = [
 
 const TagRoutes: Routes = [
   { path: '', component: TagComponent, pathMatch: 'full' },
-  { path: ':id', component: TagComponent },
+  { path: ':id', component: TaglistComponent },
   { path: '**', component: TagComponent }
 ];
 

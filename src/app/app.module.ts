@@ -15,6 +15,7 @@ import { DataService } from './service/data.service';
 import { AuthorComponent } from './author/author.component';
 import { PContentComponent } from './post/p-content/p-content.component';
 import { TagComponent } from './tag/tag.component';
+import { TaglistComponent } from './tag/taglist/taglist.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TagComponent } from './tag/tag.component';
     PostComponent,
     AuthorComponent,
     PContentComponent,
-    TagComponent
+    TagComponent,
+    TaglistComponent
   ],
   imports: [
     BrowserModule,
