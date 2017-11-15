@@ -1,3 +1,22 @@
-<p>
-  taglist works!
-</p>
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of post_list">
+              <div class="row">
+                  <a [routerLink]="'/layout/post/'+item['id']" class="col">
+                    <p [innerText]="item['title']"></p>
+                  </a>
+                <div class="col text-right">
+                  <p [innerText]="item['createDate']|date: 'yyyy/MM/dd'"></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

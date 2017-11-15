@@ -12,9 +12,10 @@ export class TagComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    const search_data = { 'table': 'tag' };
-    this.dataService.GetApidata(search_data)
-      .then(res => this.tag_data = res);
+    const search_data = { };
+    const uri = '/tag/index';
+    this.dataService.Get(uri, search_data)
+        .then(res => this.tag_data = res['data']);
   }
 
 }

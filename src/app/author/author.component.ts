@@ -11,12 +11,10 @@ export class AuthorComponent implements OnInit {
   data_list: Array<any>;
 
   constructor(private datasvc: DataService) {
-    // dataService.Getdata('assets/data/data.json', '0')
-    //   .then(res => this.data_list = res['author']);
-
-    const search_data = { 'table': 'author' };
-    datasvc.GetApidata(search_data)
-      .then(res => { this.prepare(res); });
+    const search_data = { };
+    const uri = '/author/index';
+    this.datasvc.Get(uri, search_data)
+    .then(res => this.prepare(res['data']));
   }
 
   ngOnInit() {

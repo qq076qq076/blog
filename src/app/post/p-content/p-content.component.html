@@ -6,8 +6,13 @@
           <h4 class="card-title" [innerText]="post_data['title']||'載入中.....'"></h4>
           <div class="card-text" [innerHTML]="post_data['content']">
           </div>
-          <div class="tool">
-            <div class="datetime" [innerText]="post_data['createDate']|date: 'yyyy/MM/dd'">
+          <div class="tool row">
+            <div class="col text-left">
+              <a [innerText]="post_data['type']"></a>
+            </div>
+            <div class="col text-right">
+              <p class="datetime" [innerText]="post_data['createDate']|date: 'yyyy/MM/dd'">
+              </p>
             </div>
           </div>
         </div>
