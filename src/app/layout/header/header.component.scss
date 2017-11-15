@@ -1,3 +1,9 @@
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
 nav {
   background-color: black;
   opacity: 0.5;
@@ -15,13 +21,6 @@ nav {
       cursor: pointer;
     }
   }
-}
-
-.fixed{
-  position: fixed;
-  top:0;
-  z-index: 5;
-  width: 100%;
 }
 
 h2 {
