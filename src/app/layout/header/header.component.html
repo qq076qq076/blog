@@ -5,10 +5,13 @@
   <div>
     <div class="container">
       <nav>
-        <ul class="row">
-          <li *ngFor="let item of nav_list" class="col text-center" [routerLink]="item.link">
-            <!-- <a [routerLink]="item.link">{{item.name}}</a> -->
+        <ul class="nav">
+          <li *ngFor="let item of nav_list" class="nav-item" [routerLinkActive]="['active']"  [routerLink]="item.link">
+            <!-- <a>{{item.name}}</a> -->
             {{item.name}}
+          </li>
+          <li class="nav-item">
+            <a (click)="logIn()">登入</a>
           </li>
         </ul>
       </nav>

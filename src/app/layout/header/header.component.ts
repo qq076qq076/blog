@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { DialogComponent } from '../../component/dialog/dialog.component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  providers: [DialogComponent]
 })
 export class HeaderComponent implements OnInit {
   nav_list: Array<any>;
   need_fixed = false;
-
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  //   // console.log(number);
-  //   this.need_fixed = (number > 60);
-  // }
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {
     this.nav_list = [
@@ -23,5 +19,15 @@ export class HeaderComponent implements OnInit {
       { name: '分類', link: '/layout/tag' },
       { name: '關於我', link: '/layout/author' }
     ];
+  }
+
+  logIn() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      console.log(result);
+    });
   }
 }

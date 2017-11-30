@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialog, MatDialogModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { AuthorComponent } from './author/author.component';
 import { PContentComponent } from './post/p-content/p-content.component';
 import { TagComponent } from './tag/tag.component';
 import { TaglistComponent } from './tag/taglist/taglist.component';
+import { DialogComponent } from './component/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,16 +31,23 @@ import { TaglistComponent } from './tag/taglist/taglist.component';
     AuthorComponent,
     PContentComponent,
     TagComponent,
-    TaglistComponent
+    TaglistComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
-  providers: [DataService],
-  bootstrap: [AppComponent]
+  providers: [
+    DataService,
+    MatDialog
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [DialogComponent]
 })
 export class AppModule { }

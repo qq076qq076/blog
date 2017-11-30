@@ -1,0 +1,27 @@
+<!-- <ol>
+  <li>
+    <input matInput [(ngModel)]="name" placeholder="What's your name?">
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose:
+    <i>{{animal}}</i>
+  </li>
+</ol> -->
+<div class="card text-truncate">
+  <div class="card-body">
+    <div class="row text-center">
+      <div class="col-12">
+        <input type="text" matInput [(ngModel)]="user.account" placeholder="Account" required>
+      </div>
+      <div class="col-12">
+        <input type="password" matInput [(ngModel)]="user.password" placeholder="Password" required>
+      </div>
+      <div class="col-12">
+        <button mat-raised-button (click)="logIn()">Pick one</button>
+      </div>
+    </div>
+  </div>
+</div>

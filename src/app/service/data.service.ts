@@ -24,6 +24,13 @@ export class DataService {
       .catch(this.handleError);
   }
 
+  Post(uri, data) {
+    return this.http.post(environment.api + uri, data)
+    .map(res => { console.log(res); return res; })
+    .toPromise()
+    .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
