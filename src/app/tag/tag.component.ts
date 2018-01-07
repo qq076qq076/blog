@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../service/data.service';
+import { DataService } from '@Service/data.service';
 
 @Component({
   selector: 'app-tag',

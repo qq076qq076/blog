@@ -4,7 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialog, MatDialogModule } from '@angular/material';
+import { MatDialog, MatDialogModule, MatMenuModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { PContentComponent } from './post/p-content/p-content.component';
 import { TagComponent } from './tag/tag.component';
 import { TaglistComponent } from './tag/taglist/taglist.component';
 import { DialogComponent } from './component/dialog/dialog.component';
+import { NewPostComponent } from './post/new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DialogComponent } from './component/dialog/dialog.component';
     PContentComponent,
     TagComponent,
     TaglistComponent,
-    DialogComponent
+    DialogComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { DialogComponent } from './component/dialog/dialog.component';
     HttpClientModule,
     NgbModule.forRoot(),
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [
     DataService,

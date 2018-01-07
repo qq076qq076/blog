@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { DataService } from '../../service/data.service';
+import { DataService } from '@Service/data.service';
 
 @Component({
   selector: 'app-dialog',
@@ -12,7 +12,7 @@ export class DialogComponent implements OnInit {
     account: null,
     password: null
   };
-
+  error: string;
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -23,9 +23,18 @@ export class DialogComponent implements OnInit {
 
   logIn(): void {
     const uri = '/user/login';
-    this.DataSvc.Post(uri, this.user)
-    .then((res) => {
-
+    this.error = null;
+    this.DataSvc.Post(uri, this.user).then(res => {
+      console.log(res);
+      if (res['http_code'] === 200) {
+        localStorage['token'] = res['data']['token'];
+        this.dialogRef.close();
+      } else {
+        this.error = res['data']['message'];
+      }
     });
+  }
+  cancel(): void {
+    this.dialogRef.close();
   }
 }

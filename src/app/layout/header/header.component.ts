@@ -11,6 +11,7 @@ import { DialogComponent } from '../../component/dialog/dialog.component';
 export class HeaderComponent implements OnInit {
   nav_list: Array<any>;
   need_fixed = false;
+  IsLogIn = false;
   constructor(public dialog: MatDialog) {}
 
   ngOnInit() {

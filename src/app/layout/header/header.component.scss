@@ -2,10 +2,20 @@ header {
   position: fixed;
   width: 100%;
   z-index: 5;
+  .more {
+    position: fixed;
+    top: 2px;
+    right: 5px;
+  }
+  .collapse {
+    transition-duration: 1s;
+    animation-name: fadeOut;
+  }
 }
 
-h2{
+h2 {
   margin: 0;
+  text-align: center;
 }
 
 nav {
@@ -20,14 +30,10 @@ nav {
       color: white;
       background-color: black;
       cursor: pointer;
-      &.active{
+      &.active {
         background-color: #3b3b3b;
         border: 3px solid blue;
       }
     }
   }
-}
-
-h2 {
-  text-align: center;
 }

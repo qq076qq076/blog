@@ -6,12 +6,14 @@ import { AuthorComponent } from './author/author.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PostComponent } from './post/post.component';
 import { PContentComponent } from './post/p-content/p-content.component';
+import { NewPostComponent } from './post/new-post/new-post.component';
 import { TagComponent } from './tag/tag.component';
 import { TaglistComponent } from './tag/taglist/taglist.component';
 
 const PostRoutes: Routes = [
   { path: '', component: PostComponent, pathMatch: 'full' },
   { path: ':id', component: PContentComponent },
+  { path: 'new', component: NewPostComponent },
   { path: '**', component: PostComponent }
 ];
 

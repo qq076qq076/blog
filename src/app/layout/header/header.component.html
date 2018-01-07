@@ -1,17 +1,39 @@
 <header>
   <div class="container">
     <h2>自我紀錄式</h2>
+    <div class="more d-md-none d-lg-none">
+      <a class="btn btn-outline-secondary btn-sm"  data-toggle="collapse" (click)="showmore=!showmore">
+        <img src="assets/images/more.png" alt="更多選項">
+      </a>
+    </div>
+    <!-- <div> -->
+      <ul class="collapse" [ngClass]="{ 'show': showmore}">
+        <li *ngFor="let item of nav_list" [routerLinkActive]="['active']" [routerLink]="item.link">
+          {{item.name}}
+        </li>
+        <li *ngIf="!IsLogIn">
+          <a (click)="logIn()">登入</a>
+        </li>
+      </ul>
+    <!-- </div> -->
   </div>
   <div>
-    <div class="container">
+    <div class="container d-none d-md-block d-lg-block">
       <nav>
         <ul class="nav">
-          <li *ngFor="let item of nav_list" class="nav-item" [routerLinkActive]="['active']"  [routerLink]="item.link">
+          <li *ngFor="let item of nav_list" class="nav-item" [routerLinkActive]="['active']" [routerLink]="item.link">
             <!-- <a>{{item.name}}</a> -->
             {{item.name}}
           </li>
-          <li class="nav-item">
-            <a (click)="logIn()">登入</a>
+          <li class="nav-item" *ngIf="!IsLogIn" (click)="logIn()">
+            <a>登入</a>
+          </li>
+          <li class="nav-item" *ngIf="IsLogIn" [matMenuTriggerFor]="menu">
+            <a>會員</a>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>新增文章</button>
+              <button mat-menu-item>登出</button>
+            </mat-menu>
           </li>
         </ul>
       </nav>
